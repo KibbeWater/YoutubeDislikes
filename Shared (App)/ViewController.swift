@@ -58,6 +58,25 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
         }
 #endif
     }
+    
+#if os(iOS)
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if navigationAction.navigationType == .linkActivated  {
+            if let url = navigationAction.request.url,
+               let host = url.host, host.hasPrefix("domain.com") !=
+                UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+                decisionHandler(.cancel)
+            } else {
+                // Open in web view
+                decisionHandler(.allow)
+            }
+        } else {
+            // other navigation type, such as reload, back or forward buttons
+            decisionHandler(.allow)
+        }
+    }
+#endif
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
 #if os(macOS)
