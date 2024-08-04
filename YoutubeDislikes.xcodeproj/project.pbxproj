@@ -65,6 +65,7 @@
 		807EA6492C5EB188008EE7F3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				/Localized/Main.html,
 				Assets.xcassets,
 				Resources/Icon.png,
 				Resources/Script.js,
@@ -92,6 +93,7 @@
 		807EA6552C5EB188008EE7F3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				/Localized/Main.html,
 				Assets.xcassets,
 				Resources/Icon.png,
 				Resources/Script.js,
@@ -153,13 +155,6 @@
 				Base.lproj/Main.storyboard,
 			);
 		};
-		807EA6542C5EB188008EE7F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 807EA5FA2C5EB188008EE7F3 /* Resources */;
-			membershipExceptions = (
-				Resources/../Base.lproj/Main.html,
-			);
-		};
 		807EA65F2C5EB188008EE7F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 807EA60C2C5EB188008EE7F3 /* Resources */;
@@ -167,17 +162,10 @@
 				Base.lproj/Main.storyboard,
 			);
 		};
-		807EA6602C5EB188008EE7F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 807EA60C2C5EB188008EE7F3 /* Resources */;
-			membershipExceptions = (
-				Resources/../Base.lproj/Main.html,
-			);
-		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		807EA5E42C5EB187008EE7F3 /* Shared (App) */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (807EA6492C5EB188008EE7F3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 807EA6542C5EB188008EE7F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 807EA6552C5EB188008EE7F3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 807EA6602C5EB188008EE7F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Shared (App)"; sourceTree = "<group>"; };
+		807EA5E42C5EB187008EE7F3 /* Shared (App) */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (807EA6492C5EB188008EE7F3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 807EA6552C5EB188008EE7F3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Shared (App)"; sourceTree = "<group>"; };
 		807EA5ED2C5EB188008EE7F3 /* Shared (Extension) */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (807EA6612C5EB188008EE7F3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 807EA6622C5EB188008EE7F3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (Resources/_locales, Resources/images, ); path = "Shared (Extension)"; sourceTree = "<group>"; };
 		807EA5FE2C5EB188008EE7F3 /* iOS (App) */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (807EA6522C5EB188008EE7F3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 807EA6532C5EB188008EE7F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "iOS (App)"; sourceTree = "<group>"; };
 		807EA60F2C5EB188008EE7F3 /* macOS (App) */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (807EA65E2C5EB188008EE7F3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 807EA65F2C5EB188008EE7F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "macOS (App)"; sourceTree = "<group>"; };
