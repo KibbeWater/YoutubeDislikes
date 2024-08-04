@@ -14,11 +14,6 @@
         "512": "images/icon-512.png"
     },
 
-    "background": {
-        "scripts": [ "background.js" ],
-        "type": "module"
-    },
-
     "content_scripts": [{
         "js": [ "content.js" ],
         "matches": [ "*://*.youtube.com/*" ]

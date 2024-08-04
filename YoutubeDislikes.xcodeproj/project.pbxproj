@@ -118,7 +118,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Resources/_locales,
-				Resources/background.js,
 				Resources/content.js,
 				Resources/images,
 				Resources/manifest.json,
@@ -133,7 +132,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Resources/_locales,
-				Resources/background.js,
 				Resources/content.js,
 				Resources/images,
 				Resources/manifest.json,
