@@ -531,7 +531,7 @@
 				DEVELOPMENT_TEAM = 89625ZHN6X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = YoutubeDislikes;
+				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Dislikes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -568,7 +568,7 @@
 				DEVELOPMENT_TEAM = 89625ZHN6X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = YoutubeDislikes;
+				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Dislikes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
