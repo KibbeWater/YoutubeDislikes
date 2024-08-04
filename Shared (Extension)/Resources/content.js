@@ -7,14 +7,14 @@ const cErr = (txt) => console.error(`[${prfx}] ${txt}`)
  https://github.com/Anarios/return-youtube-dislike
  */
 function numberFormat(numberState) {
-  return getNumberFormatter().format(numberState);
+  return getNumberFormatter(numberState).format(numberState);
 }
 
 /*
  Source:
  https://github.com/Anarios/return-youtube-dislike
  */
-function getNumberFormatter() {
+function getNumberFormatter(val) {
   let userLocales;
   if (document.documentElement.lang) {
     userLocales = document.documentElement.lang;
@@ -34,7 +34,7 @@ function getNumberFormatter() {
   }
 
   const formatter = Intl.NumberFormat(userLocales, {
-    notation: "standard",
+    notation: val < 1_000_000 ? "standard" : "compact",
     compactDisplay: "short",
   });
   return formatter;
@@ -68,7 +68,6 @@ function updateLikedState() {
     
     const isLiked = likeButton.ariaPressed === "true"
     const isDisliked = dislikeButton.ariaPressed === "true"
-    cLog(`${isLiked} ${isDisliked}`)
     
     if (isLiked && isDisliked) return; // What the fuck?
     if (isLiked) likeState = STATE_LIKED;
