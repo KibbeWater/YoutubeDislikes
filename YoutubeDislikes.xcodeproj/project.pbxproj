@@ -58,6 +58,7 @@
 		807EA60E2C5EB188008EE7F3 /* YoutubeDislikes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeDislikes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807EA61A2C5EB188008EE7F3 /* YoutubeDislikes Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "YoutubeDislikes Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		807EA6242C5EB188008EE7F3 /* YoutubeDislikes Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "YoutubeDislikes Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		807EA66D2C5F124F008EE7F3 /* YoutubeDislikes (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YoutubeDislikes (iOS).entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -221,6 +222,7 @@
 		807EA5DF2C5EB187008EE7F3 = {
 			isa = PBXGroup;
 			children = (
+				807EA66D2C5F124F008EE7F3 /* YoutubeDislikes (iOS).entitlements */,
 				807EA5E42C5EB187008EE7F3 /* Shared (App) */,
 				807EA5ED2C5EB188008EE7F3 /* Shared (Extension) */,
 				807EA5FE2C5EB188008EE7F3 /* iOS (App) */,
@@ -526,6 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "YoutubeDislikes (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 89625ZHN6X;
@@ -564,6 +567,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "YoutubeDislikes (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 89625ZHN6X;
@@ -673,7 +677,8 @@
 				DEVELOPMENT_TEAM = 89625ZHN6X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = YoutubeDislikes;
+				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Dislikes";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -707,7 +712,8 @@
 				DEVELOPMENT_TEAM = 89625ZHN6X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = YoutubeDislikes;
+				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Dislikes";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
