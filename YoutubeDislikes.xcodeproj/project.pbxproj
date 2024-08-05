@@ -13,8 +13,8 @@
 		806BC33A2C5FCE1800796DE9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3392C5FCE1800796DE9 /* Base */; };
 		806BC3432C5FCE1800796DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806BC3422C5FCE1800796DE9 /* AppDelegate.swift */; };
 		806BC3462C5FCE1800796DE9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3452C5FCE1800796DE9 /* Base */; };
-		806BC34D2C5FCE1800796DE9 /* YoutubeDislikes Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 806BC34C2C5FCE1800796DE9 /* YoutubeDislikes Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		806BC3572C5FCE1800796DE9 /* YoutubeDislikes Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 806BC3562C5FCE1800796DE9 /* YoutubeDislikes Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		806BC34D2C5FCE1800796DE9 /* Return Dislikes Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 806BC34C2C5FCE1800796DE9 /* Return Dislikes Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		806BC3572C5FCE1800796DE9 /* Return Dislikes Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 806BC3562C5FCE1800796DE9 /* Return Dislikes Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		806BC35D2C5FCE1800796DE9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3192C5FCE1800796DE9 /* Base */; };
 		806BC35E2C5FCE1800796DE9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3192C5FCE1800796DE9 /* Base */; };
 		806BC35F2C5FCE1800796DE9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 806BC31A2C5FCE1800796DE9 /* Icon.png */; };
@@ -69,7 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				806BC34D2C5FCE1800796DE9 /* YoutubeDislikes Extension.appex in Embed Foundation Extensions */,
+				806BC34D2C5FCE1800796DE9 /* Return Dislikes Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +80,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				806BC3572C5FCE1800796DE9 /* YoutubeDislikes Extension.appex in Embed Foundation Extensions */,
+				806BC3572C5FCE1800796DE9 /* Return Dislikes Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,19 +102,19 @@
 		806BC3272C5FCE1800796DE9 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
 		806BC3282C5FCE1800796DE9 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
 		806BC3292C5FCE1800796DE9 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
-		806BC32E2C5FCE1800796DE9 /* YoutubeDislikes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeDislikes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		806BC32E2C5FCE1800796DE9 /* Return Dislikes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Return Dislikes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		806BC3312C5FCE1800796DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		806BC3332C5FCE1800796DE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		806BC3362C5FCE1800796DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		806BC3392C5FCE1800796DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		806BC33B2C5FCE1800796DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		806BC3402C5FCE1800796DE9 /* YoutubeDislikes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeDislikes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		806BC3402C5FCE1800796DE9 /* Return Dislikes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Return Dislikes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		806BC3422C5FCE1800796DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		806BC3452C5FCE1800796DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		806BC3472C5FCE1800796DE9 /* YoutubeDislikes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YoutubeDislikes.entitlements; sourceTree = "<group>"; };
-		806BC34C2C5FCE1800796DE9 /* YoutubeDislikes Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "YoutubeDislikes Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		806BC34C2C5FCE1800796DE9 /* Return Dislikes Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Return Dislikes Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		806BC3512C5FCE1800796DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		806BC3562C5FCE1800796DE9 /* YoutubeDislikes Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "YoutubeDislikes Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		806BC3562C5FCE1800796DE9 /* Return Dislikes Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Return Dislikes Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		806BC35B2C5FCE1800796DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		806BC35C2C5FCE1800796DE9 /* YoutubeDislikes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YoutubeDislikes.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,10 +211,10 @@
 		806BC32F2C5FCE1800796DE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				806BC32E2C5FCE1800796DE9 /* YoutubeDislikes.app */,
-				806BC3402C5FCE1800796DE9 /* YoutubeDislikes.app */,
-				806BC34C2C5FCE1800796DE9 /* YoutubeDislikes Extension.appex */,
-				806BC3562C5FCE1800796DE9 /* YoutubeDislikes Extension.appex */,
+				806BC32E2C5FCE1800796DE9 /* Return Dislikes.app */,
+				806BC3402C5FCE1800796DE9 /* Return Dislikes.app */,
+				806BC34C2C5FCE1800796DE9 /* Return Dislikes Extension.appex */,
+				806BC3562C5FCE1800796DE9 /* Return Dislikes Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 			);
 			name = "YoutubeDislikes (iOS)";
 			productName = "YoutubeDislikes (iOS)";
-			productReference = 806BC32E2C5FCE1800796DE9 /* YoutubeDislikes.app */;
+			productReference = 806BC32E2C5FCE1800796DE9 /* Return Dislikes.app */;
 			productType = "com.apple.product-type.application";
 		};
 		806BC33F2C5FCE1800796DE9 /* YoutubeDislikes (macOS) */ = {
@@ -296,7 +296,7 @@
 			);
 			name = "YoutubeDislikes (macOS)";
 			productName = "YoutubeDislikes (macOS)";
-			productReference = 806BC3402C5FCE1800796DE9 /* YoutubeDislikes.app */;
+			productReference = 806BC3402C5FCE1800796DE9 /* Return Dislikes.app */;
 			productType = "com.apple.product-type.application";
 		};
 		806BC34B2C5FCE1800796DE9 /* YoutubeDislikes Extension (iOS) */ = {
@@ -313,7 +313,7 @@
 			);
 			name = "YoutubeDislikes Extension (iOS)";
 			productName = "YoutubeDislikes Extension (iOS)";
-			productReference = 806BC34C2C5FCE1800796DE9 /* YoutubeDislikes Extension.appex */;
+			productReference = 806BC34C2C5FCE1800796DE9 /* Return Dislikes Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		806BC3552C5FCE1800796DE9 /* YoutubeDislikes Extension (macOS) */ = {
@@ -330,7 +330,7 @@
 			);
 			name = "YoutubeDislikes Extension (macOS)";
 			productName = "YoutubeDislikes Extension (macOS)";
-			productReference = 806BC3562C5FCE1800796DE9 /* YoutubeDislikes Extension.appex */;
+			productReference = 806BC3562C5FCE1800796DE9 /* Return Dislikes Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -645,7 +645,7 @@
 				DEVELOPMENT_TEAM = 89625ZHN6X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "YoutubeDislikes Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "ReturnDislikes Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -659,7 +659,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kibbewater.YoutubeDislikes.Extension;
-				PRODUCT_NAME = "YoutubeDislikes Extension";
+				PRODUCT_NAME = "Return Dislikes Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -676,7 +676,7 @@
 				DEVELOPMENT_TEAM = 89625ZHN6X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "YoutubeDislikes Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "ReturnDislikes Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -690,7 +690,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kibbewater.YoutubeDislikes.Extension;
-				PRODUCT_NAME = "YoutubeDislikes Extension";
+				PRODUCT_NAME = "Return Dislikes Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -711,7 +711,7 @@
 				DEVELOPMENT_TEAM = 89625ZHN6X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Dislikes";
+				INFOPLIST_KEY_CFBundleDisplayName = "Return Dislikes";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -731,7 +731,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kibbewater.YoutubeDislikes;
-				PRODUCT_NAME = YoutubeDislikes;
+				PRODUCT_NAME = "Return Dislikes";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -750,7 +750,7 @@
 				DEVELOPMENT_TEAM = 89625ZHN6X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Dislikes";
+				INFOPLIST_KEY_CFBundleDisplayName = "Return Dislikes";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -770,7 +770,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kibbewater.YoutubeDislikes;
-				PRODUCT_NAME = YoutubeDislikes;
+				PRODUCT_NAME = "Return Dislikes";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -789,7 +789,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "YoutubeDislikes Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "ReturnDislikes Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -803,7 +803,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kibbewater.YoutubeDislikes.Extension;
-				PRODUCT_NAME = "YoutubeDislikes Extension";
+				PRODUCT_NAME = "Return Dislikes Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -821,7 +821,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "YoutubeDislikes Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "ReturnDislikes Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -835,7 +835,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kibbewater.YoutubeDislikes.Extension;
-				PRODUCT_NAME = "YoutubeDislikes Extension";
+				PRODUCT_NAME = "Return Dislikes Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -855,7 +855,7 @@
 				DEVELOPMENT_TEAM = 89625ZHN6X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Dislikes";
+				INFOPLIST_KEY_CFBundleDisplayName = "Return Dislikes";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -872,7 +872,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kibbewater.YoutubeDislikes;
-				PRODUCT_NAME = YoutubeDislikes;
+				PRODUCT_NAME = "Return Dislikes";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -891,7 +891,7 @@
 				DEVELOPMENT_TEAM = 89625ZHN6X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Dislikes";
+				INFOPLIST_KEY_CFBundleDisplayName = "Return Dislikes";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -908,7 +908,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kibbewater.YoutubeDislikes;
-				PRODUCT_NAME = YoutubeDislikes;
+				PRODUCT_NAME = "Return Dislikes";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
