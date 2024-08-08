@@ -42,7 +42,7 @@ function getNumberFormatter(val) {
 
 const isMobile = () => window.location.host == "m.youtube.com";
 
-const _buttonHost = () => isMobile() ? document.querySelector(".YtSegmentedLikeDislikeButtonViewModelHost") : document.querySelector("#top-level-buttons-computed")
+const _buttonHost = () => document.querySelector(".YtSegmentedLikeDislikeButtonViewModelHost")
 const _likeHost = () => _buttonHost()?.querySelector(".YtLikeButtonViewModelHost")
 const _dislikeHost = () => _buttonHost()?.querySelector(".YtDislikeButtonViewModelHost")
 function getDislikeButton() {

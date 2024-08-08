@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "806BC32D2C5FCE1800796DE9"
-               BuildableName = "YoutubeDislikes.app"
+               BuildableName = "Return Dislikes.app"
                BlueprintName = "YoutubeDislikes (iOS)"
                ReferencedContainer = "container:YoutubeDislikes.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "806BC32D2C5FCE1800796DE9"
-            BuildableName = "YoutubeDislikes.app"
+            BuildableName = "Return Dislikes.app"
             BlueprintName = "YoutubeDislikes (iOS)"
             ReferencedContainer = "container:YoutubeDislikes.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "806BC32D2C5FCE1800796DE9"
-            BuildableName = "YoutubeDislikes.app"
+            BuildableName = "Return Dislikes.app"
             BlueprintName = "YoutubeDislikes (iOS)"
             ReferencedContainer = "container:YoutubeDislikes.xcodeproj">
          </BuildableReference>
