@@ -41,10 +41,11 @@ function getNumberFormatter(val) {
 }
 
 const isMobile = () => window.location.host == "m.youtube.com";
+const isShorts = () => window.location.pathname.startsWith("/shorts/")
 
-const _buttonHost = () => document.querySelector(".YtSegmentedLikeDislikeButtonViewModelHost")
-const _likeHost = () => _buttonHost()?.querySelector(".YtLikeButtonViewModelHost")
-const _dislikeHost = () => _buttonHost()?.querySelector(".YtDislikeButtonViewModelHost")
+const _buttonHost = () => document.querySelector(isShorts() ? ".reel-video-in-sequence[is-active] ytd-like-button-renderer" : ".YtSegmentedLikeDislikeButtonViewModelHost")
+const _likeHost = () => _buttonHost()?.querySelector(isShorts() ? "#like-button" : ".YtLikeButtonViewModelHost")
+const _dislikeHost = () => _buttonHost()?.querySelector(isShorts() ? "#dislike-button" : ".YtDislikeButtonViewModelHost")
 function getDislikeButton() {
     return _dislikeHost()?.querySelector("button");
 }
@@ -53,6 +54,11 @@ function getLikeButton() {
 }
 
 function getVideoId() {
+    if (isShorts()) {
+        const pathSplits = window.location.pathname.split("/")
+        return pathSplits[pathSplits.length - 1]
+    }
+    
     const searchParams = new URLSearchParams(window.location.search);
     return searchParams.get("v");
 }
@@ -86,7 +92,10 @@ async function fetchStatus() {
 
 function updateCount() {
     let addCount = likeState === STATE_DISLIKED ? 1 : 0;
-    if (videoData) _updateDislikes(numberFormat(videoData.dislikes + addCount));
+    const textData = numberFormat(videoData.dislikes + addCount);
+    const _isShort = isShorts();
+    if (videoData && !_isShort) _updateDislikes(textData);
+    else if (videoData) _updateDislikesShorts(textData);
 }
 
 function _updateDislikes(dislikeText) {
@@ -102,6 +111,14 @@ function _updateDislikes(dislikeText) {
     textDiv.classList.add("yt-spec-button-shape-next__button-text-content")
     textDiv.appendChild(document.createTextNode(dislikeText))
     dislikeBtn.insertBefore(textDiv, dislikeBtn.childNodes[2]);
+}
+
+function _updateDislikesShorts(dislikeText) {
+    const dislikeBtn = _dislikeHost();
+    if (!dislikeBtn) return;
+    
+    const txtSpan = dislikeBtn.querySelector(".yt-spec-button-shape-with-label__label span");
+    txtSpan.innerText = dislikeText
 }
 
 function dislikeClicked() {
@@ -140,11 +157,12 @@ function attachListeners() {
         smartimationObserver = createObserver({
             attributes: true,
             subtree: true,
+            characterData: isShorts() ? true : false
         }, dislikeClicked)
         smartimationObserver.container = null;
     }
     
-    let container = _buttonHost()?.querySelector(".smartimation")
+    let container = isShorts() ? _buttonHost() : _buttonHost()?.querySelector(".smartimation")
     if (container && container != smartimationObserver.container) {
         cLog("Re-connecting observer")
         smartimationObserver.disconnect();
@@ -176,10 +194,9 @@ function run() {
 
 function tryRun() {
     cLog("Attempting run")
-    if (window.location.pathname !== "/watch") return cErr(`Page is not video (/watch)`);
+    if (window.location.pathname !== "/watch" && !isShorts()) return cErr(`Page is not video or short (/watch || /shorts/*)`);
     
-    const searchParams = new URLSearchParams(window.location.search);
-    if (!searchParams.has("v")) return cErr("Page is not video (no video id in url)");
+    if (!getVideoId()) return cErr(`Missing video ID`);
     
     run();
 }
