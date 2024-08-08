@@ -43,9 +43,31 @@ function getNumberFormatter(val) {
 const isMobile = () => window.location.host == "m.youtube.com";
 const isShorts = () => window.location.pathname.startsWith("/shorts/")
 
-const _buttonHost = () => document.querySelector(isShorts() ? ".reel-video-in-sequence[is-active] ytd-like-button-renderer" : ".YtSegmentedLikeDislikeButtonViewModelHost")
-const _likeHost = () => _buttonHost()?.querySelector(isShorts() ? "#like-button" : ".YtLikeButtonViewModelHost")
-const _dislikeHost = () => _buttonHost()?.querySelector(isShorts() ? "#dislike-button" : ".YtDislikeButtonViewModelHost")
+const _buttonHost = () =>
+  document.querySelector(
+    isShorts()
+      ? isMobile()
+        ? ".YtShortsCarouselCarouselItem[aria-hidden='false'] ytm-like-button-renderer"
+        : ".reel-video-in-sequence[is-active] ytd-like-button-renderer"
+      : ".YtSegmentedLikeDislikeButtonViewModelHost",
+  );
+const _likeHost = () =>
+  _buttonHost()?.querySelector(
+    isShorts()
+      ? isMobile()
+        ? "ytm-toggle-button-renderer:nth-child(1)"
+        : "#like-button"
+      : ".YtLikeButtonViewModelHost",
+  );
+const _dislikeHost = () =>
+  _buttonHost()?.querySelector(
+    isShorts()
+      ? isMobile()
+        ? "ytm-toggle-button-renderer:nth-child(2)"
+        : "#dislike-button"
+      : ".YtDislikeButtonViewModelHost",
+  );
+
 function getDislikeButton() {
     return _dislikeHost()?.querySelector("button");
 }
