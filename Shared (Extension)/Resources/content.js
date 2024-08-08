@@ -153,6 +153,18 @@ function likeClicked() {
     updateCount();
 }
 
+const _shortsWrapper = () => document.querySelector(".YtShortsCarouselHost .YtShortsCarouselCarouselItems");
+let oldSlide = false;
+function didShortsSlide() {
+    let shortsWrapper = _shortsWrapper();
+    
+    if (shortsWrapper.classList.contains("YtShortsCarouselSliding")) return oldSlide = true;
+    if (!oldSlide) return;
+    oldSlide = false;
+    
+    fetchStatus();
+}
+
 /*
  Source:
  https://github.com/Anarios/return-youtube-dislike
@@ -171,6 +183,7 @@ function createObserver(options, callback) {
 }
 
 let smartimationObserver = null
+let shortNavObserver = null
 function attachListeners() {
     _dislikeHost()?.addEventListener("click", dislikeClicked);
     _likeHost()?.addEventListener("click", likeClicked)
@@ -190,6 +203,24 @@ function attachListeners() {
         smartimationObserver.disconnect();
         smartimationObserver.observe(container);
         smartimationObserver.container = container;
+    }
+    
+    if (isShorts() && isMobile()) {
+        if (!shortNavObserver) {
+            shortNavObserver = createObserver({
+                attributes: true,
+            }, didShortsSlide);
+            shortNavObserver.container = null;
+        }
+        
+        let shortsWrapper = _shortsWrapper();
+        console.log(shortsWrapper, shortNavObserver.container)
+        if (shortsWrapper && shortsWrapper != shortNavObserver.container) {
+            cLog("Re-connecting shorts navigation observer")
+            shortNavObserver.disconnect();
+            shortNavObserver.observe(shortsWrapper);
+            shortNavObserver.container = container;
+        }
     }
 }
 
