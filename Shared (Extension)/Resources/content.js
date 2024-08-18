@@ -42,9 +42,17 @@ function getNumberFormatter(val) {
 
 const isMobile = () => window.location.host == "m.youtube.com";
 const isShorts = () => window.location.pathname.startsWith("/shorts/")
+const isSpring24UI = () => document.querySelector("#fixed-columns-secondary") !== null;
+const isSpring24Open = () => document.querySelector("#fixed-columns-secondary #secondary") !== null;
 
+const _spring24UI = () => document.querySelector("#fixed-columns-secondary #secondary");
 const _buttonHost = () =>
-  document.querySelector(
+  (isSpring24UI()
+    ? isSpring24Open()
+      ? _spring24UI()
+      : document
+    : document
+  ).querySelector(
     isShorts()
       ? isMobile()
         ? ".YtShortsCarouselCarouselItem[aria-hidden='false'] ytm-like-button-renderer"
