@@ -162,7 +162,9 @@ function likeClicked() {
     updateCount();
     
     if (oldLikeState !== likeState) {
-        if (likeState == STATE_LIKED)
+        if (likeState == STATE_LIKED) return submitVote(1);
+        else if (likeState == STATE_NOTLIKED) return submitVote(0);
+        else if (likeState == STATE_DISLIKED) return submitVote(-1);
     }
 }
 
