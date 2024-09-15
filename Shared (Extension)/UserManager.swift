@@ -85,7 +85,7 @@ class UserManager {
         let request = VoteRequest(userId: self.userId, videoId: videoId, value: _rating)
         
         guard let requestData = try? JSONEncoder().encode(request) else { throw UserError.unknownError(describes: "Unable to encode VoteRequest") }
-        guard let puzzle = try? await postData(to: URL(string: API_URL + "/Interact/confirmVote")!, body: requestData) else { throw UserError.badVotesRequest(request) }
+        guard let puzzle = try? await postData(to: url, body: requestData) else { throw UserError.badVotesRequest(request) }
         
         guard let jsonData = try? JSONDecoder().decode(PuzzleResponse.self, from: puzzle) else { throw UserError.badVotesRequest(request) }
         
@@ -93,7 +93,7 @@ class UserManager {
         
         let response = VoteResponse(request, solution: solution)
         
-        let _result = try? await postData(to: url, body: response)
+        let _result = try? await postData(to: URL(string: API_URL + "/Interact/confirmVote")!, body: response)
         guard let __result = _result, String(data: __result, encoding: .utf8) == "true" else {
             os_log(.error, "[Return Dislikes] Failed to rate video with id: \(videoId), response: \(String(data: (_result ?? "nil".data(using: .utf8))!, encoding: .utf8)!)")
             throw UserError.unknownError(describes: "Failed to confirm vote")
