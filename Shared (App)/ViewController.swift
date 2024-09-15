@@ -21,7 +21,7 @@ let extensionBundleIdentifier = "com.kibbewater.YoutubeDislikes.Extension"
 class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMessageHandler {
 
     @IBOutlet var webView: WKWebView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

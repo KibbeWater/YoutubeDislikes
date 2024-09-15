@@ -21,4 +21,9 @@ function openPreferences() {
     webkit.messageHandlers.controller.postMessage("open-preferences");
 }
 
+function setUserId(id) {
+    const span = document.getElementById("user-id")
+    span.innerText = id
+}
+
 document.querySelector("button.open-preferences").addEventListener("click", openPreferences);

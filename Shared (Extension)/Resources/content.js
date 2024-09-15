@@ -157,8 +157,13 @@ function dislikeClicked() {
 }
 
 function likeClicked() {
+    const oldLikeState = likeState
     updateLikedState();
     updateCount();
+    
+    if (oldLikeState !== likeState) {
+        if (likeState == STATE_LIKED)
+    }
 }
 
 const _shortsWrapper = () => document.querySelector(".YtShortsCarouselHost .YtShortsCarouselCarouselItems");
@@ -232,6 +237,13 @@ function attachListeners() {
     }
 }
 
+function submitVote(vote) {
+    if (vote !== -1 && vote !== 0 && vote !== 1) return;
+    
+    browser.runtime.sendMessage({ type: "vote", videoId: getVideoId(), rating: vote }).then((response) => {
+        console.log("Received response: ", response);
+    });
+}
 
 function run() {
     let checkRanTimer;
