@@ -43,6 +43,12 @@
 		806BC3782C5FCE1800796DE9 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3282C5FCE1800796DE9 /* popup.css */; };
 		806BC3792C5FCE1800796DE9 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3292C5FCE1800796DE9 /* popup.js */; };
 		806BC37A2C5FCE1800796DE9 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3292C5FCE1800796DE9 /* popup.js */; };
+		809DA3462C972A1100C0FE0B /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DA3432C972A1100C0FE0B /* Puzzle.swift */; };
+		809DA3472C972A1100C0FE0B /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DA3432C972A1100C0FE0B /* Puzzle.swift */; };
+		809DA3482C972A1100C0FE0B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DA3442C972A1100C0FE0B /* UserManager.swift */; };
+		809DA3492C972A1100C0FE0B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DA3442C972A1100C0FE0B /* UserManager.swift */; };
+		809DA34A2C972A1100C0FE0B /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DA3452C972A1100C0FE0B /* APITypes.swift */; };
+		809DA34B2C972A1100C0FE0B /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DA3452C972A1100C0FE0B /* APITypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +124,9 @@
 		806BC35B2C5FCE1800796DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		806BC35C2C5FCE1800796DE9 /* YoutubeDislikes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YoutubeDislikes.entitlements; sourceTree = "<group>"; };
 		809DA3422C9720D500C0FE0B /* YoutubeDislikes Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YoutubeDislikes Extension (iOS).entitlements"; sourceTree = "<group>"; };
+		809DA3432C972A1100C0FE0B /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
+		809DA3442C972A1100C0FE0B /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		809DA3452C972A1100C0FE0B /* APITypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITypes.swift; sourceTree = "<group>"; };
 		80EE9C262C6E71210037196B /* YoutubeDislikes (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YoutubeDislikes (iOS).entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +201,9 @@
 		806BC31F2C5FCE1800796DE9 /* Shared (Extension) */ = {
 			isa = PBXGroup;
 			children = (
+				809DA3452C972A1100C0FE0B /* APITypes.swift */,
+				809DA3432C972A1100C0FE0B /* Puzzle.swift */,
+				809DA3442C972A1100C0FE0B /* UserManager.swift */,
 				806BC3202C5FCE1800796DE9 /* SafariWebExtensionHandler.swift */,
 				806BC3212C5FCE1800796DE9 /* Resources */,
 			);
@@ -464,7 +476,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809DA34A2C972A1100C0FE0B /* APITypes.swift in Sources */,
+				809DA3482C972A1100C0FE0B /* UserManager.swift in Sources */,
 				806BC3692C5FCE1800796DE9 /* SafariWebExtensionHandler.swift in Sources */,
+				809DA3462C972A1100C0FE0B /* Puzzle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +487,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809DA34B2C972A1100C0FE0B /* APITypes.swift in Sources */,
+				809DA3492C972A1100C0FE0B /* UserManager.swift in Sources */,
 				806BC36A2C5FCE1800796DE9 /* SafariWebExtensionHandler.swift in Sources */,
+				809DA3472C972A1100C0FE0B /* Puzzle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
