@@ -49,6 +49,8 @@
 		809DA3492C972A1100C0FE0B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DA3442C972A1100C0FE0B /* UserManager.swift */; };
 		809DA34A2C972A1100C0FE0B /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DA3452C972A1100C0FE0B /* APITypes.swift */; };
 		809DA34B2C972A1100C0FE0B /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809DA3452C972A1100C0FE0B /* APITypes.swift */; };
+		809DA35A2C972FCB00C0FE0B /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 809DA3592C972FCB00C0FE0B /* background.js */; };
+		809DA35B2C972FCB00C0FE0B /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 809DA3592C972FCB00C0FE0B /* background.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,7 @@
 		809DA3432C972A1100C0FE0B /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
 		809DA3442C972A1100C0FE0B /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		809DA3452C972A1100C0FE0B /* APITypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITypes.swift; sourceTree = "<group>"; };
+		809DA3592C972FCB00C0FE0B /* background.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		80EE9C262C6E71210037196B /* YoutubeDislikes (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YoutubeDislikes (iOS).entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +223,7 @@
 				806BC3272C5FCE1800796DE9 /* popup.html */,
 				806BC3282C5FCE1800796DE9 /* popup.css */,
 				806BC3292C5FCE1800796DE9 /* popup.js */,
+				809DA3592C972FCB00C0FE0B /* background.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -426,6 +430,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809DA35A2C972FCB00C0FE0B /* background.js in Resources */,
 				806BC3772C5FCE1800796DE9 /* popup.css in Resources */,
 				806BC3752C5FCE1800796DE9 /* popup.html in Resources */,
 				806BC36D2C5FCE1800796DE9 /* images in Resources */,
@@ -440,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809DA35B2C972FCB00C0FE0B /* background.js in Resources */,
 				806BC3782C5FCE1800796DE9 /* popup.css in Resources */,
 				806BC3762C5FCE1800796DE9 /* popup.html in Resources */,
 				806BC36E2C5FCE1800796DE9 /* images in Resources */,
