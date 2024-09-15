@@ -20,7 +20,7 @@ browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
     const {type, data} = request
     
     if (type === undefined) {
-      return Promise.resolve(sendError("Invalid request shape, missing request type"))  
+      return sendError("Invalid request shape, missing request type")  
     }
     
     switch (type) {

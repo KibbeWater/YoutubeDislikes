@@ -114,8 +114,8 @@ function updateLikedState() {
 function submitVote(vote) {
     if (vote !== -1 && vote !== 0 && vote !== 1) return;
     
-    browser.runtime.sendMessage({ type: "vote", videoId: getVideoId(), rating: vote }).then((response) => {
-        console.log("Received response: ", response);
+    browser.runtime.sendMessage({ type: "vote", data: { videoId: getVideoId(), rating: vote } }).then((response) => {
+        cLog("Received vote result: " + JSON.stringify(response));
     });
 }
 
@@ -278,6 +278,9 @@ function tryRun() {
 }
 
 (() => {
+    browser.runtime.sendMessage({ type: "echo", data: { hello: "world" } }).then((response) => {
+        cLog("Received response from background " + JSON.stringify(response))
+    });
     tryRun();
     window.addEventListener("yt-navigate-finish", tryRun, true);
 })();
