@@ -111,6 +111,14 @@ function updateLikedState() {
     else likeState = STATE_NOTLIKED
 }
 
+function submitVote(vote) {
+    if (vote !== -1 && vote !== 0 && vote !== 1) return;
+    
+    browser.runtime.sendMessage({ type: "vote", videoId: getVideoId(), rating: vote }).then((response) => {
+        console.log("Received response: ", response);
+    });
+}
+
 const API_URL = "https://returnyoutubedislikeapi.com";
 let videoData;
 async function fetchStatus() {
@@ -159,13 +167,13 @@ function dislikeClicked() {
 function likeClicked() {
     const oldLikeState = likeState
     updateLikedState();
-    updateCount();
-    
     if (oldLikeState !== likeState) {
         if (likeState == STATE_LIKED) return submitVote(1);
         else if (likeState == STATE_NOTLIKED) return submitVote(0);
         else if (likeState == STATE_DISLIKED) return submitVote(-1);
     }
+    
+    updateCount();
 }
 
 const _shortsWrapper = () => document.querySelector(".YtShortsCarouselHost .YtShortsCarouselCarouselItems");
@@ -239,13 +247,6 @@ function attachListeners() {
     }
 }
 
-function submitVote(vote) {
-    if (vote !== -1 && vote !== 0 && vote !== 1) return;
-    
-    browser.runtime.sendMessage({ type: "vote", videoId: getVideoId(), rating: vote }).then((response) => {
-        console.log("Received response: ", response);
-    });
-}
 
 function run() {
     let checkRanTimer;

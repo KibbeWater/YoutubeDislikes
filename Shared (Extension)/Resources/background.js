@@ -38,6 +38,8 @@ browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
             return sendMessageToNativeApp({ type: 'vote', data: { videoId, rating } })
         case 'register':
             return sendMessageToNativeApp({ type: 'register' })
+        case 'echo':
+            return sendSuccess(data)
         default:
             console.error("Invalid request type entered")
             break;
