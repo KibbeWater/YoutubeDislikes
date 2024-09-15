@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,16 +43,6 @@
 		806BC3782C5FCE1800796DE9 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3282C5FCE1800796DE9 /* popup.css */; };
 		806BC3792C5FCE1800796DE9 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3292C5FCE1800796DE9 /* popup.js */; };
 		806BC37A2C5FCE1800796DE9 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3292C5FCE1800796DE9 /* popup.js */; };
-		80A5F1FE2C9607D3002C6C0B /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F1FD2C9607D3002C6C0B /* background.js */; };
-		80A5F1FF2C9607D3002C6C0B /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F1FD2C9607D3002C6C0B /* background.js */; };
-		80A5F2012C963E6E002C6C0B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5F2002C963E6E002C6C0B /* UserManager.swift */; };
-		80A5F2022C963E6E002C6C0B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5F2002C963E6E002C6C0B /* UserManager.swift */; };
-		80A5F2042C96446C002C6C0B /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5F2032C96446C002C6C0B /* APITypes.swift */; };
-		80A5F2052C96446C002C6C0B /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5F2032C96446C002C6C0B /* APITypes.swift */; };
-		80A5F2072C9645AB002C6C0B /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5F2062C9645AB002C6C0B /* Puzzle.swift */; };
-		80A5F2082C9645AB002C6C0B /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5F2062C9645AB002C6C0B /* Puzzle.swift */; };
-		80A5F24F2C964712002C6C0B /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5F2062C9645AB002C6C0B /* Puzzle.swift */; };
-		80A5F2502C96471C002C6C0B /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5F2032C96446C002C6C0B /* APITypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,13 +59,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 806BC3552C5FCE1800796DE9;
 			remoteInfo = "YoutubeDislikes Extension (macOS)";
-		};
-		80A5F24A2C9646AC002C6C0B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 806BC3122C5FCE1700796DE9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 806BC32D2C5FCE1800796DE9;
-			remoteInfo = "YoutubeDislikes (iOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -134,16 +117,9 @@
 		806BC3562C5FCE1800796DE9 /* Return Dislikes Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Return Dislikes Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		806BC35B2C5FCE1800796DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		806BC35C2C5FCE1800796DE9 /* YoutubeDislikes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YoutubeDislikes.entitlements; sourceTree = "<group>"; };
-		80A5F1FD2C9607D3002C6C0B /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
-		80A5F2002C963E6E002C6C0B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		80A5F2032C96446C002C6C0B /* APITypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITypes.swift; sourceTree = "<group>"; };
-		80A5F2062C9645AB002C6C0B /* Puzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
-		80A5F2462C9646AC002C6C0B /* BackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		809DA3422C9720D500C0FE0B /* YoutubeDislikes Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YoutubeDislikes Extension (iOS).entitlements"; sourceTree = "<group>"; };
+		80EE9C262C6E71210037196B /* YoutubeDislikes (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YoutubeDislikes (iOS).entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		80A5F2472C9646AC002C6C0B /* BackendTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = BackendTests; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		806BC32B2C5FCE1800796DE9 /* Frameworks */ = {
@@ -174,26 +150,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80A5F2432C9646AC002C6C0B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		806BC3112C5FCE1700796DE9 = {
 			isa = PBXGroup;
 			children = (
+				809DA3422C9720D500C0FE0B /* YoutubeDislikes Extension (iOS).entitlements */,
+				80EE9C262C6E71210037196B /* YoutubeDislikes (iOS).entitlements */,
 				806BC3162C5FCE1800796DE9 /* Shared (App) */,
 				806BC31F2C5FCE1800796DE9 /* Shared (Extension) */,
 				806BC3302C5FCE1800796DE9 /* iOS (App) */,
 				806BC3412C5FCE1800796DE9 /* macOS (App) */,
 				806BC3502C5FCE1800796DE9 /* iOS (Extension) */,
 				806BC35A2C5FCE1800796DE9 /* macOS (Extension) */,
-				80A5F2472C9646AC002C6C0B /* BackendTests */,
 				806BC32F2C5FCE1800796DE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -222,9 +192,6 @@
 		806BC31F2C5FCE1800796DE9 /* Shared (Extension) */ = {
 			isa = PBXGroup;
 			children = (
-				80A5F2032C96446C002C6C0B /* APITypes.swift */,
-				80A5F2062C9645AB002C6C0B /* Puzzle.swift */,
-				80A5F2002C963E6E002C6C0B /* UserManager.swift */,
 				806BC3202C5FCE1800796DE9 /* SafariWebExtensionHandler.swift */,
 				806BC3212C5FCE1800796DE9 /* Resources */,
 			);
@@ -241,7 +208,6 @@
 				806BC3272C5FCE1800796DE9 /* popup.html */,
 				806BC3282C5FCE1800796DE9 /* popup.css */,
 				806BC3292C5FCE1800796DE9 /* popup.js */,
-				80A5F1FD2C9607D3002C6C0B /* background.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -253,7 +219,6 @@
 				806BC3402C5FCE1800796DE9 /* Return Dislikes.app */,
 				806BC34C2C5FCE1800796DE9 /* Return Dislikes Extension.appex */,
 				806BC3562C5FCE1800796DE9 /* Return Dislikes Extension.appex */,
-				80A5F2462C9646AC002C6C0B /* BackendTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -372,29 +337,6 @@
 			productReference = 806BC3562C5FCE1800796DE9 /* Return Dislikes Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		80A5F2452C9646AC002C6C0B /* BackendTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 80A5F24C2C9646AC002C6C0B /* Build configuration list for PBXNativeTarget "BackendTests" */;
-			buildPhases = (
-				80A5F2422C9646AC002C6C0B /* Sources */,
-				80A5F2432C9646AC002C6C0B /* Frameworks */,
-				80A5F2442C9646AC002C6C0B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				80A5F24B2C9646AC002C6C0B /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				80A5F2472C9646AC002C6C0B /* BackendTests */,
-			);
-			name = BackendTests;
-			packageProductDependencies = (
-			);
-			productName = BackendTests;
-			productReference = 80A5F2462C9646AC002C6C0B /* BackendTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -402,7 +344,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1610;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					806BC32D2C5FCE1800796DE9 = {
@@ -416,10 +358,6 @@
 					};
 					806BC3552C5FCE1800796DE9 = {
 						CreatedOnToolsVersion = 15.4;
-					};
-					80A5F2452C9646AC002C6C0B = {
-						CreatedOnToolsVersion = 16.1;
-						TestTargetID = 806BC32D2C5FCE1800796DE9;
 					};
 				};
 			};
@@ -440,7 +378,6 @@
 				806BC33F2C5FCE1800796DE9 /* YoutubeDislikes (macOS) */,
 				806BC34B2C5FCE1800796DE9 /* YoutubeDislikes Extension (iOS) */,
 				806BC3552C5FCE1800796DE9 /* YoutubeDislikes Extension (macOS) */,
-				80A5F2452C9646AC002C6C0B /* BackendTests */,
 			);
 		};
 /* End PBXProject section */
@@ -477,7 +414,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80A5F1FF2C9607D3002C6C0B /* background.js in Resources */,
 				806BC3772C5FCE1800796DE9 /* popup.css in Resources */,
 				806BC3752C5FCE1800796DE9 /* popup.html in Resources */,
 				806BC36D2C5FCE1800796DE9 /* images in Resources */,
@@ -492,7 +428,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80A5F1FE2C9607D3002C6C0B /* background.js in Resources */,
 				806BC3782C5FCE1800796DE9 /* popup.css in Resources */,
 				806BC3762C5FCE1800796DE9 /* popup.html in Resources */,
 				806BC36E2C5FCE1800796DE9 /* images in Resources */,
@@ -500,13 +435,6 @@
 				806BC36C2C5FCE1800796DE9 /* _locales in Resources */,
 				806BC3742C5FCE1800796DE9 /* content.js in Resources */,
 				806BC37A2C5FCE1800796DE9 /* popup.js in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		80A5F2442C9646AC002C6C0B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,10 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80A5F2022C963E6E002C6C0B /* UserManager.swift in Sources */,
-				80A5F2082C9645AB002C6C0B /* Puzzle.swift in Sources */,
 				806BC3692C5FCE1800796DE9 /* SafariWebExtensionHandler.swift in Sources */,
-				80A5F2042C96446C002C6C0B /* APITypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,19 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80A5F2012C963E6E002C6C0B /* UserManager.swift in Sources */,
-				80A5F2072C9645AB002C6C0B /* Puzzle.swift in Sources */,
 				806BC36A2C5FCE1800796DE9 /* SafariWebExtensionHandler.swift in Sources */,
-				80A5F2052C96446C002C6C0B /* APITypes.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		80A5F2422C9646AC002C6C0B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				80A5F24F2C964712002C6C0B /* Puzzle.swift in Sources */,
-				80A5F2502C96471C002C6C0B /* APITypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,11 +488,6 @@
 			isa = PBXTargetDependency;
 			target = 806BC3552C5FCE1800796DE9 /* YoutubeDislikes Extension (macOS) */;
 			targetProxy = 806BC3582C5FCE1800796DE9 /* PBXContainerItemProxy */;
-		};
-		80A5F24B2C9646AC002C6C0B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 806BC32D2C5FCE1800796DE9 /* YoutubeDislikes (iOS) */;
-			targetProxy = 80A5F24A2C9646AC002C6C0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -752,7 +660,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -784,7 +692,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -902,7 +810,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -935,7 +843,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -1025,47 +933,6 @@
 			};
 			name = Release;
 		};
-		80A5F24D2C9646AC002C6C0B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 89625ZHN6X;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kibbewater.BackendTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Return Dislikes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Return Dislikes";
-			};
-			name = Debug;
-		};
-		80A5F24E2C9646AC002C6C0B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 89625ZHN6X;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kibbewater.BackendTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Return Dislikes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Return Dislikes";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1110,15 +977,6 @@
 			buildConfigurations = (
 				806BC3892C5FCE1800796DE9 /* Debug */,
 				806BC38A2C5FCE1800796DE9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		80A5F24C2C9646AC002C6C0B /* Build configuration list for PBXNativeTarget "BackendTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				80A5F24D2C9646AC002C6C0B /* Debug */,
-				80A5F24E2C9646AC002C6C0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
