@@ -159,23 +159,27 @@ function _updateDislikesShorts(dislikeText) {
     txtSpan.innerText = dislikeText
 }
 
+let lastVote = STATE_NOTLIKED
+function trySubmitVote() {
+    if (likeState !== lastVote) {
+        lastVote = likeState
+        if (likeState == STATE_LIKED) return submitVote(1);
+        else if (likeState == STATE_NOTLIKED) return submitVote(0);
+        else if (likeState == STATE_DISLIKED) return submitVote(-1);
+    }
+}
+
 function dislikeClicked() {
     updateLikedState();
-    
-    if (likeState == STATE_LIKED) return submitVote(1);
-    else if (likeState == STATE_NOTLIKED) return submitVote(0);
-    else if (likeState == STATE_DISLIKED) return submitVote(-1);
+    trySubmitVote();
     
     updateCount();
 }
 
 function likeClicked() {
     updateLikedState();
-    
-    if (likeState == STATE_LIKED) return submitVote(1);
-    else if (likeState == STATE_NOTLIKED) return submitVote(0);
-    else if (likeState == STATE_DISLIKED) return submitVote(-1);
-    
+    trySubmitVote();
+
     updateCount();
 }
 
