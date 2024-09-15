@@ -92,10 +92,12 @@ class UserManager {
         guard let solution = await solvePuzzle(jsonData) else { throw UserError.unsolvedPuzzle(jsonData) }
         
         let response = VoteResponse(request, solution: solution)
-        let responseData = try? JSONEncoder().encode(response)
         
-        guard let _result = try? await postData(to: url, body: responseData!),
-              String(data: _result, encoding: .utf8) == "true" else { return }
+        let _result = try? await postData(to: url, body: response)
+        guard let __result = _result, String(data: __result, encoding: .utf8) == "true" else {
+            os_log(.error, "[Return Dislikes] Failed to rate video with id: \(videoId), response: \(String(data: (_result ?? "nil".data(using: .utf8))!, encoding: .utf8)!)")
+            throw UserError.unknownError(describes: "Failed to confirm vote")
+        }
     }
     
     static func registerUser() async -> String? {
