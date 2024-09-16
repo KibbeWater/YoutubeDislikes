@@ -21,9 +21,12 @@ function openPreferences() {
     webkit.messageHandlers.controller.postMessage("open-preferences");
 }
 
-function setUserId(id) {
-    const span = document.getElementById("user-id")
-    span.innerText = id
+function setInitialValue(disallowVoting) {
+    const checkbox = document.querySelector("#disallow-voting")
+    checkbox.checked = disallowVoting ? "true" : undefined
 }
 
+document.querySelector("#disallow-voting").addEventListener("click", (e) => {
+    webkit.messageHandlers.controller.postMessage(e.target.checked ? "disallow-voting" : "allow-voting")
+})
 document.querySelector("button.open-preferences").addEventListener("click", openPreferences);

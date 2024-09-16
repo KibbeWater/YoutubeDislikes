@@ -36,6 +36,20 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
         self.webView.loadFileURL(Bundle.main.url(forResource: "Main", withExtension: "html")!, allowingReadAccessTo: Bundle.main.resourceURL!)
     }
 
+    func getStore() -> UserDefaults {
+        return UserDefaults(suiteName: "group.com.kibbewater.return-dislikes")!
+    }
+    
+    func setDisallowVoting(_ value: Bool) {
+        let store = getStore()
+        store.set(value, forKey: "disallowVoting")
+        store.synchronize()
+    }
+    
+    func getDisallowVoting() -> Bool {
+        return getStore().bool(forKey: "disallowVoting")
+    }
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 #if os(iOS)
         webView.evaluateJavaScript("show('ios')")
@@ -79,6 +93,14 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
 #endif
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        if (message.body as! String == "allow-voting") {
+            setDisallowVoting(false)
+        }
+        
+        if (message.body as! String == "disallow-voting") {
+            setDisallowVoting(true)
+        }
+        
 #if os(macOS)
         if (message.body as! String != "open-preferences") {
             return

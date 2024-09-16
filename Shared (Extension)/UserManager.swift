@@ -69,6 +69,7 @@ enum UserError: Error {
     case badVotesRequest(VoteRequest)
     case unsolvedPuzzle(PuzzleResponse)
     case unknownError(describes: String)
+    case optedOut
 }
 
 // Usage
@@ -82,6 +83,9 @@ class UserManager {
     }
     
     init() async throws {
+        guard !getDisallowVoting() else {
+            throw UserError.optedOut
+        }
         os_log(.default, "[Return Dislikes] Attempting to retrieve user id...")
         var userId = UserManager.retreiveUserId()
         

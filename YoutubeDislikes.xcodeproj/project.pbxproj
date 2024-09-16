@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800CB4CB2C98C8910041B3D1 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800CB4CA2C98C8910041B3D1 /* Store.swift */; };
+		800CB4CC2C98C8910041B3D1 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800CB4CA2C98C8910041B3D1 /* Store.swift */; };
 		806BC3322C5FCE1800796DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806BC3312C5FCE1800796DE9 /* AppDelegate.swift */; };
 		806BC3342C5FCE1800796DE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806BC3332C5FCE1800796DE9 /* SceneDelegate.swift */; };
 		806BC3372C5FCE1800796DE9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 806BC3362C5FCE1800796DE9 /* Base */; };
@@ -96,6 +98,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		800CB4CA2C98C8910041B3D1 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		806BC3192C5FCE1800796DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		806BC31A2C5FCE1800796DE9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		806BC31B2C5FCE1800796DE9 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
@@ -206,6 +209,7 @@
 			children = (
 				809DA3452C972A1100C0FE0B /* APITypes.swift */,
 				809DA3432C972A1100C0FE0B /* Puzzle.swift */,
+				800CB4CA2C98C8910041B3D1 /* Store.swift */,
 				809DA3442C972A1100C0FE0B /* UserManager.swift */,
 				806BC3202C5FCE1800796DE9 /* SafariWebExtensionHandler.swift */,
 				806BC3212C5FCE1800796DE9 /* Resources */,
@@ -482,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800CB4CC2C98C8910041B3D1 /* Store.swift in Sources */,
 				809DA34A2C972A1100C0FE0B /* APITypes.swift in Sources */,
 				809DA3482C972A1100C0FE0B /* UserManager.swift in Sources */,
 				806BC3692C5FCE1800796DE9 /* SafariWebExtensionHandler.swift in Sources */,
@@ -493,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800CB4CB2C98C8910041B3D1 /* Store.swift in Sources */,
 				809DA34B2C972A1100C0FE0B /* APITypes.swift in Sources */,
 				809DA3492C972A1100C0FE0B /* UserManager.swift in Sources */,
 				806BC36A2C5FCE1800796DE9 /* SafariWebExtensionHandler.swift in Sources */,

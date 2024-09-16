@@ -11,9 +11,26 @@ import os.log
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
     func handleRegister() async -> NSExtensionItem {
-        guard let userManager = try? await UserManager() else { return errorResponse("Unable to retrieve user manager") }
-        
-        return successResponse(userManager.userId)
+        do {
+            let userManager = try await UserManager()
+            
+            return successResponse(userManager.userId)
+        } catch (let _err) {
+            guard let error = _err as? UserError else { return errorResponse("Unknown error") }
+            
+            switch error {
+            case .invalidRating:
+                return errorResponse("Faulty error")
+            case .badVotesRequest(let voteRequest):
+                return errorResponse("Bad votes request: \(String(describing: voteRequest))")
+            case .unsolvedPuzzle(let puzzleResponse):
+                return errorResponse("Unable to solve puzzle: \(String(describing: puzzleResponse))")
+            case .unknownError(let describes):
+                return errorResponse(describes)
+            case .optedOut:
+                return errorResponse("User opted out")
+            }
+        }
     }
     
     func handleVotes(data: Any?) async -> NSExtensionItem {
@@ -39,6 +56,8 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                 return errorResponse("Unable to solve puzzle: \(String(describing: puzzleResponse))")
             case .unknownError(let describes):
                 return errorResponse(describes)
+            case .optedOut:
+                return errorResponse("User opted out")
             }
         }
     }
@@ -98,13 +117,24 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                 let data: Any? = messageDict["data"]
                 switch eventType {
                 case "register":
+                    guard !getDisallowVoting() else {
+                        response = errorResponse("User has opted out of voting")
+                        break
+                    }
                     response = await handleRegister()
                     break;
                 case "vote":
+                    guard !getDisallowVoting() else {
+                        response = errorResponse("User has opted out of voting")
+                        break
+                    }
                     response = await handleVotes(data: data)
                     break;
                 case "get-id":
                     response = await handleGetId()
+                    break;
+                case "get-settings":
+                    response = successResponse(["disallowVoting": getDisallowVoting()])
                     break;
                 default:
                     response = errorResponse("Invalid event type")

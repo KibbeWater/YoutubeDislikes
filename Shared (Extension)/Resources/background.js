@@ -40,6 +40,8 @@ browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
             return sendMessageToNativeApp({ type: 'register' })
         case 'echo':
             return sendSuccess(data)
+        case 'get-settings':
+            return sendMessageToNativeApp({ type: 'get-settings' })
         default:
             console.error("Invalid request type entered")
             break;
