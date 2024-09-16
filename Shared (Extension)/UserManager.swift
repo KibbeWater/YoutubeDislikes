@@ -44,10 +44,8 @@ func performRequest(for url: URL, method: String, body: Data? = nil) async throw
         request.httpBody = body
     }
     
-    os_log(.info, "[Return Dislikes] Request: \(request.raw)")
     do {
         let (data, _) = try await URLSession.shared.data(for: request)
-        os_log(.info, "[Return Dislikes] Response: \(data)")
         return data
     } catch (let err) {
         os_log(.error, "[Return Dislikes] Error retrieving data: \(err)")
