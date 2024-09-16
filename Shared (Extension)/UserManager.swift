@@ -22,7 +22,7 @@ func performRequest(for url: URL, method: String, body: Data? = nil) async throw
         request.httpBody = body
     }
     
-    let (data, resp) = try await URLSession.shared.data(for: request)
+    let (data, _) = try await URLSession.shared.data(for: request)
     return data
 }
 
@@ -81,16 +81,13 @@ class UserManager {
     func vote(_ rating: Int, videoId: String) async throws {
         guard let _rating = RatingType(rawValue: rating) else { throw UserError.invalidRating }
         
-        let url = URL(string: API_URL + "/Interact/vote")!
         let request = VoteRequest(userId: self.userId, videoId: videoId, value: _rating)
         
-        guard let requestData = try? JSONEncoder().encode(request) else { throw UserError.unknownError(describes: "Unable to encode VoteRequest") }
-        guard let puzzle = try? await postData(to: url, body: requestData) else { throw UserError.badVotesRequest(request) }
+        guard let puzzle = try? await postData(to: URL(string: API_URL + "/Interact/vote")!, body: request) else { throw UserError.badVotesRequest(request) }
         
         guard let jsonData = try? JSONDecoder().decode(PuzzleResponse.self, from: puzzle) else { throw UserError.badVotesRequest(request) }
         
         guard let solution = await solvePuzzle(jsonData) else { throw UserError.unsolvedPuzzle(jsonData) }
-        
         let response = VoteResponse(request, solution: solution)
         
         let _result = try? await postData(to: URL(string: API_URL + "/Interact/confirmVote")!, body: response)
