@@ -8,6 +8,28 @@
 import Foundation
 import os.log
 
+extension URLRequest {
+    /// Prints the request as "raw" String
+    ///
+    /// Like:
+    /// ```
+    /// GET /path HTTP/1.1
+    /// Host: host
+    /// Header: Value
+    /// Header: Value
+    ///
+    /// { "some": "body", "for PUT requests": "or POST requests" }
+    /// ```
+    var raw: String {
+        """
+        \(self.httpMethod ?? "") \(self.url?.relativePath ?? "")\(self.url?.query == nil ? "" : "?")\(self.url?.query ?? "") HTTP/1.1
+        Host: \(self.url?.scheme ?? "")://\(self.url?.host ?? "")
+        \((self.allHTTPHeaderFields?.compactMap { "\($0): \($1)" } ?? []).joined(separator: "\n"))
+        \(String(data: self.httpBody ?? Data(), encoding: .utf8) ?? "")
+        """
+    }
+}
+
 func performRequest(for url: URL, method: String, body: Data? = nil) async throws -> Data {
     var request = URLRequest(url: url)
     request.httpMethod = method
@@ -83,9 +105,16 @@ class UserManager {
         
         let request = VoteRequest(userId: self.userId, videoId: videoId, value: _rating)
         
-        guard let puzzle = try? await postData(to: URL(string: API_URL + "/Interact/vote")!, body: request) else { throw UserError.badVotesRequest(request) }
+        guard let puzzle = try? await postData(to: URL(string: API_URL + "/Interact/vote")!, body: request) else {
+            guard let jsonData = try? JSONEncoder().encode(request) else { throw UserError.unknownError(describes: "Unable to throw lol") }
+            os_log(.error, "[Return Dislikes] Failed to rate video with id: \(videoId), request body: \(String(data: jsonData, encoding: .utf8)!)")
+            throw UserError.badVotesRequest(request)
+        }
         
-        guard let jsonData = try? JSONDecoder().decode(PuzzleResponse.self, from: puzzle) else { throw UserError.badVotesRequest(request) }
+        guard let jsonData = try? JSONDecoder().decode(PuzzleResponse.self, from: puzzle) else {
+            os_log(.error, "[Return Dislikes] Failed to decode puzzle response: \(String(data: puzzle, encoding: .utf8)!)")
+            throw UserError.badVotesRequest(request)
+        }
         
         guard let solution = await solvePuzzle(jsonData) else { throw UserError.unsolvedPuzzle(jsonData) }
         let response = VoteResponse(request, solution: solution)
