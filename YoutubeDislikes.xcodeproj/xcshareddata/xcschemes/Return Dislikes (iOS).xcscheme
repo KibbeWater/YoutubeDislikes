@@ -41,6 +41,28 @@
                ReferencedContainer = "container:YoutubeDislikes.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8075FB922CA4263F004C6438"
+               BuildableName = "Testing.xctest"
+               BlueprintName = "Testing"
+               ReferencedContainer = "container:YoutubeDislikes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8075FB9F2CA42664004C6438"
+               BuildableName = "YoutubeDislikes Testing.xctest"
+               BlueprintName = "YoutubeDislikes Testing"
+               ReferencedContainer = "container:YoutubeDislikes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
