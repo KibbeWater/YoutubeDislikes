@@ -222,6 +222,7 @@ function attachListeners() {
         smartimationObserver = createObserver({
             attributes: true,
             subtree: true,
+            childList: true,
             characterData: isShorts() ? true : false
         }, dislikeClicked)
         smartimationObserver.container = null;
