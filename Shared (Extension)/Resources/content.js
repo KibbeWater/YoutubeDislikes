@@ -156,7 +156,7 @@ function _updateDislikesShorts(dislikeText) {
     if (!dislikeBtn) return;
     
     const txtSpan = dislikeBtn.querySelector(".yt-spec-button-shape-with-label__label span");
-    txtSpan.innerText = dislikeText
+    if (txtSpan.innerText != dislikeText) txtSpan.innerText = dislikeText
 }
 
 let lastVote = STATE_NOTLIKED
