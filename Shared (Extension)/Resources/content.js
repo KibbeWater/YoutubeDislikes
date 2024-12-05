@@ -130,7 +130,7 @@ async function fetchStatus() {
 
 function updateCount() {
     let addCount = likeState === STATE_DISLIKED ? 1 : 0;
-    const textData = numberFormat(videoData.dislikes + addCount);
+    const textData = videoData?.dislikes != undefined ? numberFormat(videoData.dislikes + addCount) : "ERR";
     const _isShort = isShorts();
     if (videoData && !_isShort) _updateDislikes(textData);
     else if (videoData) _updateDislikesShorts(textData);
