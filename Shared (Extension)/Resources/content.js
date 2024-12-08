@@ -65,7 +65,7 @@ const _likeHost = () =>
       ? isMobile()
         ? "ytm-toggle-button-renderer:nth-child(1)"
         : "#like-button"
-      : ".YtLikeButtonViewModelHost",
+      : ".ytLikeButtonViewModelHost",
   );
 const _dislikeHost = () =>
   _buttonHost()?.querySelector(
@@ -73,7 +73,7 @@ const _dislikeHost = () =>
       ? isMobile()
         ? "ytm-toggle-button-renderer:nth-child(2)"
         : "#dislike-button"
-      : ".YtDislikeButtonViewModelHost",
+      : ".ytDislikeButtonViewModelHost",
   );
 
 function getDislikeButton() {
