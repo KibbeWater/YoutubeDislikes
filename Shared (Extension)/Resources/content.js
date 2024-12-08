@@ -57,7 +57,7 @@ const _buttonHost = () =>
       ? isMobile()
         ? ".YtShortsCarouselCarouselItem[aria-hidden='false'] ytm-like-button-renderer"
         : ".reel-video-in-sequence[is-active] ytd-like-button-renderer"
-      : ".YtSegmentedLikeDislikeButtonViewModelHost",
+      : ".ytSegmentedLikeDislikeButtonViewModelHost",
   );
 const _likeHost = () =>
   _buttonHost()?.querySelector(
@@ -245,7 +245,6 @@ function attachListeners() {
         }
         
         let shortsWrapper = _shortsWrapper();
-        console.log(shortsWrapper, shortNavObserver.container)
         if (shortsWrapper && shortsWrapper != shortNavObserver.container) {
             cLog("Re-connecting shorts navigation observer")
             shortNavObserver.disconnect();
