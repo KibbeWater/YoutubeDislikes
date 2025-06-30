@@ -56,7 +56,7 @@ const _buttonHost = () =>
     isShorts()
       ? isMobile()
         ? ".YtShortsCarouselCarouselItem[aria-hidden='false'] ytm-like-button-renderer"
-        : ".reel-video-in-sequence[is-active] ytd-like-button-renderer"
+        : "ytd-reel-video-renderer[is-active] ytd-like-button-renderer"
       : ".ytSegmentedLikeDislikeButtonViewModelHost",
   );
 const _likeHost = () =>
